@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>AI 學習助手</title></head>
+<body>
+    <h1>🤖 AI 學習助手</h1>
+    <p>Day 2: 輸入文字，幫你做詞頻分析。</p>
+
+    <form method="POST">
+        <textarea name="text" rows="5" cols="50" placeholder="輸入一段英文或程式碼"></textarea><br>
+        <button>分析</button>
+    </form>
+
+    {% if result %}
+    <h3>結果：</h3>
+    <ul>
+    {% for word, count in result[:5] %}
+        <li>{{ word }}: {{ count }} 次</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+
