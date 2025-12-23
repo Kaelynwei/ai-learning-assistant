@@ -17,6 +17,15 @@
         <li>{{ word }}: {{ count }} 次</li>
     {% endfor %}
     </ul>
+
+    <hr>
+    <h3>最近 5 次紀錄：</h3>
+    <ul>
+    {% for item in history %}
+        <li>{{ item.time }} - 「{{ item.text_preview }}...」 - 最常出現：{{ item.top_word }}</li>
+    {% endfor %}
+    </ul>
+
     {% endif %}
 </body>
 </html>
